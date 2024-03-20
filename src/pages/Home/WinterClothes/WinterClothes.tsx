@@ -5,11 +5,8 @@ import { TClothes } from "@/types/ClothesType";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { toogleThemes } from "@/redux/features/auth/themeSlice";
-import { useAppSelector } from "@/redux/hook";
 
 const WinterClothes = () => {
-  const darkMode = useAppSelector(toogleThemes);
   const { data } = useGetClothesQuery(undefined);
   if (!data) return null;
   return (

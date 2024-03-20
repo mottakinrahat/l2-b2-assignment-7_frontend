@@ -8,6 +8,7 @@ import WinterDashClothes from "@/pages/Dashboard Pages/AllWinterClothes/WinterDa
 import Statistics from "@/pages/Dashboard Pages/Statistics/Statistics";
 import Testimonial from "@/pages/Dashboard Pages/Testimonial/Testimonial";
 import Vounteer from "@/pages/Dashboard Pages/Volunteer/Vounteer";
+import Error from "@/pages/Error";
 import Home from "@/pages/Home/Home/Home";
 import LeaderBoard from "@/pages/LeaderBoard/LeaderBoard";
 import Login from "@/pages/Login";
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -33,7 +35,9 @@ const router = createBrowserRouter([
         path: "/winter-clothes/:id",
         element: <ViewDetails></ViewDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/clothes/${params.id}`),
+          fetch(
+            `https://l2-b2-assignment7-rahat.vercel.app/api/v1/clothes/${params.id}`
+          ),
       },
       {
         path: "/leaderboard",

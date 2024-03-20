@@ -1,5 +1,5 @@
 import { useGetAllDonorQuery } from "@/redux/features/auth/donorApi";
-import { Space, Spin, Table, Tag } from "antd";
+import { Spin, Table } from "antd";
 import type { TableProps } from "antd";
 
 interface TTestimonialData {

@@ -8,7 +8,7 @@ import { Coins, MapPin } from "lucide-react";
 
 const { Meta } = Card;
 
-const LeaderCard = ({ donor }) => {
+const LeaderCard = ({ donor }: { donor: any }) => {
   const { name, location, image, donationPrice, position } = donor;
   return (
     <div>
@@ -30,8 +30,7 @@ const LeaderCard = ({ donor }) => {
         <div className="flex  items-center gap-2 mt-1">
           <Coins className="w-4" />
           <h1>
-            <span className="font-semibold">amount:</span>
-              $ {donationPrice}
+            <span className="font-semibold">amount:</span>$ {donationPrice}
           </h1>
         </div>
       </Card>

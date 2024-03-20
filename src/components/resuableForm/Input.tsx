@@ -1,6 +1,3 @@
-import { toogleThemes } from "@/redux/features/auth/themeSlice";
-import { useAppSelector } from "@/redux/hook";
-
 interface InputProps {
   label?: string;
   register: { [key: string]: any };
@@ -16,7 +13,6 @@ export const Input: React.FC<InputProps> = ({
   type,
   defaultValue,
 }) => {
-  const darkMode = useAppSelector(toogleThemes);
   return (
     <div className="w-full max-w-md">
       <label className="block" htmlFor="name">

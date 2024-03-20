@@ -1,5 +1,5 @@
+import { RootState } from "./../../store";
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "@reduxjs/toolkit/query";
 
 const initialState = {
   darkMode: false,

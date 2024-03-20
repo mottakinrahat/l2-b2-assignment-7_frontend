@@ -49,7 +49,7 @@ const AddComments = () => {
           ></textarea>
           {errors.comment && <span> {errors.comment.message as string}</span>}
         </div>
-        <Button className="bg-[#D7E826] text-black" htmlType="submit">
+        <Button className="bg-[#D7E826] text-black" type="submit">
           Add Comment
         </Button>
       </form>

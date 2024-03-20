@@ -1,4 +1,4 @@
-import { CalendarCheck2, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 const donationEvents = [
   {
     eventName: "Warm Hearts Winter Drive",
