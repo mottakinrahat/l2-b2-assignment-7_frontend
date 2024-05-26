@@ -53,16 +53,16 @@ const Navbar = () => {
           !shouldDisplayNavbar
             ? "text-white absolute"
             : `${darkMode ? "text-white" : "text-black"}`
-        } w-full  mx-auto  z-[999] sm:max-w-xl px-10 md:max-w-full `}
+        } w-full flex justify-center items-center mx-auto  z-[999] sm:max-w-xl px-10 md:max-w-full `}
       >
-        <div className=" flex items-center justify-between  lg:gap-40 p-4 rounded-2xl">
-          <img
-            src="https://i.ibb.co/ykLXK2k/1.png"
-            className="size-[110px] absolute lg:relative"
-            alt=""
-          />
-
-          <ul className="items-center ubuntu-regular hidden space-x-8 lg:flex font-bold ">
+        <div className=" flex  justify-center  items-center lg:gap-40 p-4 ">
+          <div className="text-2xl font-bold">
+            {" "}
+            <h2>
+              WINTER<span className="text-[#D7E826]">WARDROBE</span>
+            </h2>
+          </div>
+          <ul className="lg:flex justify-center items-center ubuntu-regular hidden space-x-8  font-bold ">
             <li>
               <NavLink
                 to="/"
@@ -85,7 +85,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="community"
+                to="/community"
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "default"
                 }
@@ -137,7 +137,7 @@ const Navbar = () => {
               </li>
             )}
           </ul>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 justify-center items-center">
             <div>
               <button
                 onClick={handleToggleThemes}
