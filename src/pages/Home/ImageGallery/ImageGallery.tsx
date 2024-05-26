@@ -19,7 +19,7 @@ const ImageGallery = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div>
+    <div className="px-10 md:px-0">
       <Title title={"Image Gallery of Donation"}></Title>
       <div>
         <Swiper
@@ -40,7 +40,7 @@ const ImageGallery = () => {
           className="mySwiper"
         >
           <div>
-            {data.map((gallery:any) => (
+            {data.map((gallery: any) => (
               <div key={gallery._id}>
                 <SwiperSlide key={gallery._id}>
                   <img src={gallery.image_url} alt={`Image ${gallery._id}`} />

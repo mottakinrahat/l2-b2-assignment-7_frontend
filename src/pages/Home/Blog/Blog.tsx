@@ -28,7 +28,7 @@ const Blog = () => {
     return () => clearTimeout(timeoutId);
   }, []);
   return (
-    <motion.div >
+    <motion.div className="px-6 md:px-0">
       <Title title={"Frequently Asked Questions"}></Title>
       <motion.div
         variants={intro}

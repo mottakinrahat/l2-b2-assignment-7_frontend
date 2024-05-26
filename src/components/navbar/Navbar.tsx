@@ -53,10 +53,10 @@ const Navbar = () => {
           !shouldDisplayNavbar
             ? "text-white absolute"
             : `${darkMode ? "text-white" : "text-black"}`
-        } w-full flex justify-center items-center mx-auto  z-[999] sm:max-w-xl px-10 md:max-w-full `}
+        } w-full flex justify-center gap-6 items-center mx-auto  z-[999] sm:max-w-xl px-10 md:max-w-full `}
       >
-        <div className=" flex  justify-center  items-center lg:gap-40 p-4 ">
-          <div className="text-2xl font-bold">
+        <div className=" flex  justify-center  items-center gap-14 lg:gap-40 p-4 ">
+          <div className="md:text-2xl font-bold">
             {" "}
             <h2>
               WINTER<span className="text-[#D7E826]">WARDROBE</span>
@@ -171,19 +171,18 @@ const Navbar = () => {
               title="Open Menu"
               onClick={() => setIsMenuOpen(true)}
             >
-              <Bars3BottomRightIcon className="w-5 text-white" />
+              <Bars3BottomRightIcon className="w-5 text-yellow-500" />
             </button>
             {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full z-10">
                 <div className="p-5 bg-white border rounded shadow-sm">
                   {/* Logo & Button section */}
                   <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <Link to="/" className="inline-flex items-center">
-                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          HuntYourJob
-                        </span>
-                      </Link>
+                    <div className="md:text-2xl font-bold">
+                      {" "}
+                      <h2 className="text-gray-600">
+                        WINTER<span className="text-[#D7E826]">WARDROBE</span>
+                      </h2>
                     </div>
                     {/* Dropdown menu close button */}
                     <div>
@@ -219,6 +218,46 @@ const Navbar = () => {
                           All Winter Clothes
                         </NavLink>
                       </li>
+                      <li>
+                        <NavLink
+                          to="/community"
+                          className={({ isActive }) =>
+                            isActive ? "text-blue-500" : "default"
+                          }
+                        >
+                          Community
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="volunteer"
+                          className={({ isActive }) =>
+                            isActive ? "text-blue-500" : "default"
+                          }
+                        >
+                          volunteer
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="leaderboard"
+                          className={({ isActive }) =>
+                            isActive ? "text-blue-500" : "default"
+                          }
+                        >
+                          Leader-board
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="about-us"
+                          className={({ isActive }) =>
+                            isActive ? "text-blue-500" : "default"
+                          }
+                        >
+                          About Us
+                        </NavLink>
+                      </li>
 
                       {user && (
                         <li>
@@ -232,22 +271,7 @@ const Navbar = () => {
                           </NavLink>
                         </li>
                       )}
-                      <div>
-                        {user ? (
-                          <Button
-                            onClick={handleLogout}
-                            className="bg-[#D7E826] text-black"
-                          >
-                            Logout
-                          </Button>
-                        ) : (
-                          <Link to="/login">
-                            <Button className="bg-[#D7E826] text-black">
-                              Login
-                            </Button>
-                          </Link>
-                        )}
-                      </div>
+                      <div></div>
                     </ul>
                   </nav>
                 </div>
